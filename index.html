@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tip Calculator App</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>tipsee</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2>t i p s e e</h2>
+      <div class="container">
+        <div class="form">
+          <div>
+            <span class="label-input">Bill</span>
+            <div class="left-inner-icon">
+              <img class="icon" src="./images/icon-dollar.svg"></i>
+              <input type="number" name="bill" min="0" placeholder="0"/>
+            </div>
+          </div>
+          <div class="tips">
+            <span class="label-input">Select Tip %</span>
+            <div class="tip-percentage">
+              <label class="tip-option">
+                <input
+                  type="radio"
+                  name="tipPercentage"
+                  value="5"
+                  class="tip-radio"
+                />
+                5%
+              </label>
+              <label class="tip-option">
+                <input
+                  type="radio"
+                  name="tipPercentage"
+                  value="10"
+                  class="tip-radio"
+                />
+                10%
+              </label>
+              <label class="tip-option">
+                <input
+                  type="radio"
+                  name="tipPercentage"
+                  value="15"
+                  class="tip-radio"
+                />
+                15%
+              </label>
+              <label class="tip-option">
+                <input
+                  type="radio"
+                  name="tipPercentage"
+                  value="25"
+                  class="tip-radio"
+                />
+                25%
+              </label>
+              <label class="tip-option">
+                <input
+                  type="radio"
+                  name="tipPercentage"
+                  value="50"
+                  class="tip-radio"
+                />
+                50%
+              </label>
+              <label>
+                <input type="number" class="custom-tip" placeholder="Custom" min="0"/>
+              </label>
+            </div>
+          </div>
+          <div>
+            <span class="label-input">Number of People</span>
+            <div class="left-inner-icon">
+              <img class="icon" src="./images/icon-person.svg"></i>
+              <input type="number" name="people" min="0" placeholder="0"/>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <div class="tips-information">
+            <div class="information-container">
+              Tip Amount
+            </div>
+            <div class="information-container">
+              Total
+            </div>
+          </div>
+          <div class="reset-button">
+            Reset
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  </body>
 </html>
