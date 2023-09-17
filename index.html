@@ -15,15 +15,20 @@
   </head>
   <body>
     <div class="main">
-      <!-- <h2>t i p s e e</h2> -->
-      <img src="./images/tipsee-black-logo.png" class="app-logo">
+      <img src="./images/tipsee-black-logo.png" class="app-logo" />
       <div class="container">
         <div class="form">
           <div>
             <span class="label-input">Bill</span>
             <div class="left-inner-icon">
-              <img class="icon" src="./images/icon-dollar.svg"></i>
-              <input type="number" name="bill" min="0" placeholder="0"/>
+              <img class="icon" src="./images/icon-dollar.svg" />
+              <input
+                type="number"
+                id="bill-amount"
+                name="bill"
+                min="0"
+                placeholder="0"
+              />
             </div>
           </div>
           <div class="tips">
@@ -33,6 +38,7 @@
                 <input
                   type="radio"
                   name="tipPercentage"
+                  id="tip-5"
                   value="5"
                   class="tip-radio"
                 />
@@ -42,6 +48,7 @@
                 <input
                   type="radio"
                   name="tipPercentage"
+                  id="tip-10"
                   value="10"
                   class="tip-radio"
                 />
@@ -51,6 +58,7 @@
                 <input
                   type="radio"
                   name="tipPercentage"
+                  id="tip-15"
                   value="15"
                   class="tip-radio"
                 />
@@ -60,6 +68,7 @@
                 <input
                   type="radio"
                   name="tipPercentage"
+                  id="tip-25"
                   value="25"
                   class="tip-radio"
                 />
@@ -69,58 +78,83 @@
                 <input
                   type="radio"
                   name="tipPercentage"
+                  id="tip-50"
                   value="50"
                   class="tip-radio"
                 />
                 50%
               </label>
               <label>
-                <input type="number" class="custom-tip" placeholder="Custom" min="0"/>
+                <input
+                  id="custom-tip"
+                  type="number"
+                  class="custom-tip"
+                  placeholder="Custom"
+                  min="0"
+                />
               </label>
             </div>
           </div>
           <div>
             <span class="label-input">Number of People</span>
             <div class="left-inner-icon">
-              <img class="icon" src="./images/icon-person.svg"></i>
-              <input type="number" name="people" min="0" placeholder="0"/>
+              <img class="icon" src="./images/icon-person.svg" />
+              <input
+                type="number"
+                id="people-count"
+                name="people"
+                min="1"
+                placeholder="1"
+              />
             </div>
           </div>
         </div>
         <div class="display">
           <div class="tips-information">
             <div class="information-container">
-              Tip Amount
+              <div class="information-label">
+                <p>Tip Amount</p>
+                <span style="white-space: nowrap">/ person</span>
+              </div>
+              <div class="information-price">
+                <p>$</p>
+                <p id="tip-amount-display">0.00</p>
+              </div>
             </div>
             <div class="information-container">
-              Total
+              <div class="information-label">
+                <p>Total</p>
+                <span style="white-space: nowrap">/ person</span>
+              </div>
+              <div class="information-price">
+                <p>$</p>
+                <p id="total-amount-display">0.00</p>
+              </div>
             </div>
           </div>
-          <div class="reset-button">
-            Reset
+          <div class="information-reset-container">
+            <button
+              type="reset"
+              class="button-disabled"
+              id="reset-button"
+              onclick="reset()"
+            >
+              Reset
+            </button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset -->
+    <script src="app.js"></script>
   </body>
 </html>
+
+<!-- 
+  - Finish right side display part
+  - Update Tipsee icon
+  - Add CSS animations
+  - Add js functionality
+  - Add Easter Eggs
+  - Make it responsive
+  - Create react-app
+ -->
