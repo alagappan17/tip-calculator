@@ -43,6 +43,7 @@ body {
   border-radius: 20px;
   padding: 30px;
   display: flex;
+  gap: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -149,12 +150,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .display {
   background-color: var(--very-dark-cyan);
   border-radius: 10px;
-  width: 40%;
-  padding: 50px;
-  margin-left: 30px;
+  width: 50%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
 .app-logo {
@@ -190,6 +192,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .information-price {
   display: flex;
   gap: 5px;
+  align-items: center;
 }
 
 #total-amount-display,
@@ -197,8 +200,9 @@ input[type="number"]::-webkit-outer-spin-button {
   word-break: break-all;
   line-height: 30px;
 }
+
 .information-price p {
-  font-size: 34px;
+  font-size: 30px;
   color: var(--greenish-cyan);
 }
 
@@ -230,12 +234,25 @@ input[type="number"]::-webkit-outer-spin-button {
 @media only screen and (max-width: 600px) {
   .main {
     width: 100%;
-    height: 100%;
+    height: 90%;
   }
   .container {
     flex-direction: column;
     width: 80%;
     height: 80%;
+  }
+  .form {
+    width: 100%;
+  }
+
+  .display {
+    width: 100%;
+    padding: 30px;
+    margin: 0;
+  }
+
+  .tip-percentage {
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   }
 }
 
